@@ -28,9 +28,6 @@ class WeatherService {
             (response) in
             switch response.result {
             case .success(let value) :
-                let sampleData = WeatherModel.ResponseData(data: JSON(value))
-                print("뭐야씨1발ㄴ")
-                print(sampleData)
                 let data = WeatherModel.WeatherData(data: JSON(value))
                 success(data)
             case .failure(let error) :
